@@ -9,7 +9,7 @@ try:
     from nltk import Tree
     
     def nltk_tree(t):
-        return Tree(t[0], [c if isinstance(c, basestring) else nltk_tree(c) for c in t[1:]])
+        return Tree(t[0], [c if isinstance(c, str) else nltk_tree(c) for c in t[1:]])
     
     nltk_is_available = True
 
